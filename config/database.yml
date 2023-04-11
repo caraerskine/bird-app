@@ -75,16 +75,15 @@ test:
 #
 #   production:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-#uncommented this and added what the lab asked
 # production:
 #   <<: *default
 #   database: bird_app_production
 #   username: bird_app
 #   password: <%= ENV["BIRD_APP_DATABASE_PASSWORD"] %>
-production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
